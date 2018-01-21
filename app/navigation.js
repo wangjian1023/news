@@ -24,13 +24,54 @@
 
 /*
  * Revision History:
- *     Initial: 2018/01/16        Feng Yifei
+ *     Initial: 2018/01/16        Wang Jian
  */
 
-import Main from './pages/Main';
+import { TabNavigator } from 'react-navigation';
+// import Main from './pages/Main';
+import Broadcast from './pages/Broadcast';
+import Mine from './pages/Mine';
+import Trends from './pages/Trends';
+import Video from './pages/Video';
 
+
+const Tabs = TabNavigator({
+  HOME: {
+    screen: Broadcast,
+    navigationOptions: {
+      tabBarLabel: '首页',
+    },
+  },
+  Video: {
+    screen: Video,
+    navigationOptions: {
+      tabBarLabel: '视频',
+    },
+  },
+  Trends: {
+    screen: Trends,
+    navigationOptions: {
+      tabBarLabel: '风直播',
+    },
+  },
+  Mine: {
+    screen: Mine,
+    navigationOptions: {
+      tabBarLabel: '我',
+    },
+  },
+}, {
+  tabBarPosition: 'bottom',
+  style: {
+    backgroundColor: 'gray',
+  },
+  swipeEnabled: false,
+  labelStyle: {
+    backgroundColor: 'black',
+  },
+});
 const Navigations = {
-  Main: { screen: Main },
+  Main: { screen: Tabs },
 };
 
 export default Navigations;
