@@ -38,27 +38,15 @@ import Video from './pages/Video';
 const Tabs = TabNavigator({
   HOME: {
     screen: Broadcast,
-    navigationOptions: {
-      tabBarLabel: '首页',
-    },
   },
   Video: {
     screen: Video,
-    navigationOptions: {
-      tabBarLabel: '视频',
-    },
   },
   Trends: {
     screen: Trends,
-    navigationOptions: {
-      tabBarLabel: '风直播',
-    },
   },
   Mine: {
     screen: Mine,
-    navigationOptions: {
-      tabBarLabel: '我',
-    },
   },
 }, {
   tabBarPosition: 'bottom',
@@ -69,7 +57,18 @@ const Tabs = TabNavigator({
   labelStyle: {
     backgroundColor: 'black',
   },
+  tabBarOptions: {
+    showIcon: 'true',
+    activeTintColor: '#e91e63',
+    labelStyle: {
+      fontSize: 12,
+    },
+    style: {
+      backgroundColor: 'blue',
+    },
+  },
 });
+
 const Navigations = {
   Main: { screen: Tabs },
 };
