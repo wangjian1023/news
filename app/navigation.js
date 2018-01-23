@@ -51,7 +51,7 @@ const Tabs = TabNavigator({
 }, {
   tabBarPosition: 'bottom',
   style: {
-    backgroundColor: 'gray',
+    backgroundColor: 'white',
   },
   swipeEnabled: false,
   labelStyle: {
