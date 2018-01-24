@@ -54,17 +54,21 @@ const Tabs = TabNavigator({
     backgroundColor: 'white',
   },
   swipeEnabled: false,
+  animationEnabled: true,
   labelStyle: {
     backgroundColor: 'black',
   },
   tabBarOptions: {
     showIcon: 'true',
-    activeTintColor: '#e91e63',
+    // activeTintColor: '#e91e63',
     labelStyle: {
       fontSize: 12,
     },
     style: {
       backgroundColor: 'blue',
+    },
+    indicatorStyle: {
+      height: 0,
     },
   },
 });

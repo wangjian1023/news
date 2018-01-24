@@ -30,7 +30,7 @@
 
 import React, { Component } from 'react';
 import Icon from 'react-native-vector-icons/Entypo';
-import { Header } from 'react-native-elements';
+import { Header, Avatar } from 'react-native-elements';
 
 import {
   View,
@@ -53,7 +53,15 @@ export default class Classify extends Component {
     return (
       <View>
         <Header
-          leftComponent={{ icon: 'menu', color: '#fff' }}
+          leftComponent={
+            <Avatar
+              small
+              rounded
+              source={{ uri: "https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg" }}
+              onPress={() => console.log("Works!")}
+              activeOpacity={0.7}
+            />
+          }
           centerComponent={{ text: 'MY TITLE', style: { color: '#fff' } }}
           rightComponent={{ icon: 'home', color: '#fff' }}
         />
