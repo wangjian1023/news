@@ -1,7 +1,7 @@
 /*
  * MIT License
  *
- * Copyright (c) 2018 SmartestEE Co., Ltd.
+ * Copyright (c) 2018 SmartestEE Co., Ltd..
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -24,63 +24,51 @@
 
 /*
  * Revision History:
- *     Initial: 2018/01/16        Wang Jian
+ *     Initial: 2018/01/24       Wang Jian
  */
 
-import { TabNavigator } from 'react-navigation';
-// import Main from './pages/Main';
-import Broadcast from './pages/Broadcast';
-import Mine from './pages/Mine';
-import Trends from './pages/Trends';
-import Video from './pages/Video';
+import React, { Component } from 'react';
+import { Image, View } from 'react-native';
+import Carousel from 'react-native-snap-carousel';
+import { connect } from 'react-redux';
 
+import Dimension from '../res/Dimension';
 
-const Tabs = TabNavigator({
-  HOME: {
-    screen: Broadcast,
-  },
-  Video: {
-    screen: Video,
-  },
-  Trends: {
-    screen: Trends,
-  },
-  Mine: {
-    screen: Mine,
-  },
-}, {
-  tabBarPosition: 'bottom',
-  style: {
-    backgroundColor: 'white',
-  },
-  swipeEnabled: false,
-  animationEnabled: true,
-  tabBarOptions: {
-    showIcon: 'true',
-    activeTintColor: 'red',
-    inactiveTintColor: 'black',
-    pressOpacity: 4,
-    labelStyle: {
-      fontSize: 12,
-    },
-    style: {
-      backgroundColor: 'white',
-    },
-    labelStyle: {
-      fontSize: 10,
-      paddingTop: 0,
-      paddingBottom: 0,
-      marginBottom: 0,
-      marginTop: 0,
-    },
-    indicatorStyle: {
-      height: 0,
-    },
-  },
-});
-
-const Navigations = {
-  Main: { screen: Tabs },
+const renderSlide = ({ item }) => {
+  return (
+    <Image
+      source={{ uri: item }}
+      style={styles.slide}
+    />);
 };
 
-export default Navigations;
+class HomeCarousel extends Component {
+  render() {
+    return (
+      <View style={styles.carousel}>
+        <Carousel
+          autoplay
+          loop
+          autoplayDelay={4000}
+          autoplayInterval={4000}
+          data={this.props.slides}
+          renderItem={renderSlide}
+          sliderWidth={Dimension.ScreenWidth}
+          itemWidth={Dimension.ScreenWidth}
+        />
+      </View>
+    );
+  }
+}
+
+const styles = {
+  carousel: {
+    height: Dimension.Height(330),
+  },
+  slide: {
+    width: Dimension.Width(640),
+    height: Dimension.Height(330),
+  },
+};
+
+export default connect(({ carousel }) => ({ slides: carousel.slides }))(HomeCarousel);

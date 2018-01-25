@@ -1,7 +1,7 @@
 /*
  * MIT License
  *
- * Copyright (c) 2018 SmartestEE Co., Ltd.
+ * Copyright (c) 2018 SmartestEE Co., Ltd..
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -24,63 +24,24 @@
 
 /*
  * Revision History:
- *     Initial: 2018/01/16        Wang Jian
+ *     Initial: 2018/01/24       Zheng Kun
  */
 
-import { TabNavigator } from 'react-navigation';
-// import Main from './pages/Main';
-import Broadcast from './pages/Broadcast';
-import Mine from './pages/Mine';
-import Trends from './pages/Trends';
-import Video from './pages/Video';
+import { Dimensions } from 'react-native';
 
+const _width = 640;
+const _height = 1138;
 
-const Tabs = TabNavigator({
-  HOME: {
-    screen: Broadcast,
-  },
-  Video: {
-    screen: Video,
-  },
-  Trends: {
-    screen: Trends,
-  },
-  Mine: {
-    screen: Mine,
-  },
-}, {
-  tabBarPosition: 'bottom',
-  style: {
-    backgroundColor: 'white',
-  },
-  swipeEnabled: false,
-  animationEnabled: true,
-  tabBarOptions: {
-    showIcon: 'true',
-    activeTintColor: 'red',
-    inactiveTintColor: 'black',
-    pressOpacity: 4,
-    labelStyle: {
-      fontSize: 12,
-    },
-    style: {
-      backgroundColor: 'white',
-    },
-    labelStyle: {
-      fontSize: 10,
-      paddingTop: 0,
-      paddingBottom: 0,
-      marginBottom: 0,
-      marginTop: 0,
-    },
-    indicatorStyle: {
-      height: 0,
-    },
-  },
-});
+const Styles = {
+  ScreenWidth: Dimensions.get('window').width,
 
-const Navigations = {
-  Main: { screen: Tabs },
+  Height: (x) => {
+    return x * Dimensions.get('window').height / _height; //eslint-disable-line
+  },
+
+  Width: (y) => {
+    return y * Dimensions.get('window').width / _width; //eslint-disable-line
+  },
 };
 
-export default Navigations;
+export default Styles;

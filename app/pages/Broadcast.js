@@ -30,12 +30,14 @@
 
 import React, { Component } from 'react';
 import Icon from 'react-native-vector-icons/Entypo';
-import { Header, Avatar } from 'react-native-elements';
+import { Header, Avatar, Tile } from 'react-native-elements';
 
 import {
   View,
   Text,
 } from 'react-native';
+
+import Carousel from '../components/Broadcast';
 
 export default class Classify extends Component {
   static navigationOptions = {
@@ -51,8 +53,10 @@ export default class Classify extends Component {
   }
   render() {
     return (
-      <View>
+      <View style={{ backgroundColor: '#F5F5F5' }}>
         <Header
+          outerContainerStyles={{ backgroundColor: 'white' }}
+          innerContainerStyles={{ justifyContent: 'space-between', alignItems: 'center' }}
           leftComponent={
             <Avatar
               small
@@ -62,12 +66,24 @@ export default class Classify extends Component {
               activeOpacity={0.7}
             />
           }
-          centerComponent={{ text: 'MY TITLE', style: { color: '#fff' } }}
-          rightComponent={{ icon: 'home', color: '#fff' }}
+          centerComponent={{ text: 'MY TITLE', style: { color: 'black' } }}
+          rightComponent={{ icon: 'home', color: 'black' }}
         />
         <View>
           <Text>新闻</Text>
         </View>
+        <Carousel />
+        <Tile
+          imageSrc={{ uri: "http://p.chanyouji.cn/330447/1449299798969p1a5ofvqthoid1bsn15270daqu2.jpg?imageView2/1/w/480/h/288" }}
+          title="Lorem ipsum dolor sit amet, consectetur"
+          icon={{ name: 'play-circle', type: 'font-awesome' }}
+          contentContainerStyle={{ height: 70 }}
+        >
+          <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between' }}>
+            <Text>Caption</Text>
+            <Text>Caption</Text>
+          </View>
+        </Tile>
       </View>
     );
   }
