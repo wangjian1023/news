@@ -24,7 +24,7 @@
 
 /*
  * Revision History:
- *     Initial: 2018/01/23        Cheng Jifeng
+ *     Initial: 2018/01/26       Wang Jian
  */
 
 import React from 'react';
