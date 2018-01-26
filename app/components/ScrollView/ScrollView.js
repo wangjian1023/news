@@ -1,7 +1,7 @@
 /*
  * MIT License
  *
- * Copyright (c) 2018 SmartestEE Co., Ltd.
+ * Copyright (c) 2018 SmartestEE Co., Ltd..
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -24,63 +24,35 @@
 
 /*
  * Revision History:
- *     Initial: 2018/01/16        Wang Jian
+ *     Initial: 2018/01/26        Wang Jian
  */
 
-import { TabNavigator } from 'react-navigation';
-// import Main from './pages/Main';
-import Broadcast from './pages/Broadcast';
-import Mine from './pages/Mine';
-import Trends from './pages/Trends';
-import Video from './pages/Video';
+import React from 'react';
+import {
+  View,
+  StyleSheet,
+} from 'react-native';
 
+import Line from './line';
 
-const Tabs = TabNavigator({
-  HOME: {
-    screen: Broadcast,
+export default class Rank extends React.Component {
+  render() {
+    return (
+      <View style={styles.view}>
+        <View style={styles.line} />
+        <Line />
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  line: {
+    width: '100%',
+    height: 0.5,
+    backgroundColor: '#ddd',
   },
-  Video: {
-    screen: Video,
-  },
-  Trends: {
-    screen: Trends,
-  },
-  Mine: {
-    screen: Mine,
-  },
-}, {
-  tabBarPosition: 'bottom',
-  style: {
-    backgroundColor: 'white',
-  },
-  swipeEnabled: false,
-  animationEnabled: true,
-  tabBarOptions: {
-    showIcon: 'true',
-    activeTintColor: 'black',
-    inactiveTintColor: 'black',
-    pressOpacity: 4,
-    labelStyle: {
-      fontSize: 12,
-    },
-    style: {
-      backgroundColor: 'white',
-    },
-    labelStyle: {
-      fontSize: 10,
-      paddingTop: 0,
-      paddingBottom: 0,
-      marginBottom: 0,
-      marginTop: 0,
-    },
-    indicatorStyle: {
-      height: 0,
-    },
+  view: {
+    backgroundColor: '#fff',
   },
 });
-
-const Navigations = {
-  Main: { screen: Tabs },
-};
-
-export default Navigations;
