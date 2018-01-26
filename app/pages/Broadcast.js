@@ -38,6 +38,7 @@ import {
 } from 'react-native';
 
 import Carousel from '../components/Broadcast';
+import Line from '../components/ScrollView/line';
 
 export default class Classify extends Component {
   static navigationOptions = {
@@ -69,6 +70,7 @@ export default class Classify extends Component {
           centerComponent={{ text: 'MY TITLE', style: { color: 'black' } }}
           rightComponent={{ icon: 'home', color: 'black' }}
         />
+        <Line />
         <View>
           <Text>新闻</Text>
         </View>

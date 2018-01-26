@@ -45,31 +45,43 @@ export default class RankHeader extends React.Component {
     const labelData = [
       {
         key: '0',
-        content: '热门',
+        content: '头条',
       },
       {
         key: '1',
-        content: '美国',
+        content: '要闻',
       },
       {
         key: '2',
-        content: '日本',
+        content: '视频',
       },
       {
         key: '3',
-        content: '韩国',
+        content: '推荐',
       },
       {
         key: '4',
-        content: '台湾',
+        content: '娱乐',
       },
       {
         key: '5',
-        content: '香港',
+        content: '北京',
       },
       {
         key: '6',
-        content: '厂商',
+        content: '军事',
+      },
+      {
+        key: '7',
+        content: '体育',
+      },
+      {
+        key: '8',
+        content: '财经',
+      },
+      {
+        key: '9',
+        content: '科技',
       },
     ];
     return (
@@ -81,7 +93,7 @@ export default class RankHeader extends React.Component {
                 <Button
                   title={item.content}
                   buttonStyle={{
-                    width: 60,
+                    width: 40,
                     height: 30,
                     marginTop: 10,
                     marginBottom: 10,
