@@ -93,8 +93,8 @@ export default class RankHeader extends React.Component {
                 <Button
                   title={item.content}
                   buttonStyle={{
-                    width: 40,
-                    height: 30,
+                    width: 60,
+                    height: 40,
                     marginTop: 10,
                     marginBottom: 10,
                     borderRadius: 15,

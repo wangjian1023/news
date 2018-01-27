@@ -49,7 +49,7 @@ export default class Rank extends React.Component {
 const styles = StyleSheet.create({
   line: {
     width: '100%',
-    height: 0.5,
+    height: 0.8,
     backgroundColor: '#ddd',
   },
   view: {

@@ -71,9 +71,6 @@ export default class Classify extends Component {
           rightComponent={{ icon: 'home', color: 'black' }}
         />
         <Line />
-        <View>
-          <Text>新闻</Text>
-        </View>
         <Carousel />
         <Tile
           imageSrc={{ uri: "http://p.chanyouji.cn/330447/1449299798969p1a5ofvqthoid1bsn15270daqu2.jpg?imageView2/1/w/480/h/288" }}

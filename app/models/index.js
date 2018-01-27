@@ -30,9 +30,11 @@
 import init from './init';
 import router from './router';
 import carousel from './carousel';
+import Logical from './Logical';
 
 export const Models = [
   init,
   router,
   carousel,
+  Logical,
 ];
