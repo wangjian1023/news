@@ -24,14 +24,13 @@
 
 /*
  * Revision History:
- *     Initial: 2018/01/24        Wang Jian
+ *     Initial: 2018/01/27       Wang Jian
  */
 
-const medium = {
-  fontSize: 20,
-  mediumIcon: {
-    size: 15,
-  },
+const bold = {
+  size: 'bold',
+  color: '#14B9C8',
 };
 
-export default medium;
+export default bold;
+

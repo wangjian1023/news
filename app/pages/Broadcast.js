@@ -39,6 +39,7 @@ import {
 
 import Carousel from '../components/Broadcast';
 import Line from '../components/ScrollView/line';
+import Informatiom from '../components/hierarchy/information';
 
 export default class Classify extends Component {
   static navigationOptions = {
@@ -83,6 +84,7 @@ export default class Classify extends Component {
             <Text>Caption</Text>
           </View>
         </Tile>
+        <Informatiom />
       </View>
     );
   }
