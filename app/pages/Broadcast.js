@@ -35,6 +35,8 @@ import { Header, Avatar, Tile } from 'react-native-elements';
 import {
   View,
   Text,
+  StyleSheet,
+  ScrollView,
 } from 'react-native';
 
 import Carousel from '../components/Broadcast';
@@ -55,37 +57,45 @@ export default class Classify extends Component {
   }
   render() {
     return (
-      <View style={{ backgroundColor: '#F5F5F5' }}>
-        <Header
-          outerContainerStyles={{ backgroundColor: 'white' }}
-          innerContainerStyles={{ justifyContent: 'space-between', alignItems: 'center' }}
-          leftComponent={
-            <Avatar
-              small
-              rounded
-              source={{ uri: "https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg" }}
-              onPress={() => console.log("Works!")}
-              activeOpacity={0.7}
-            />
-          }
-          centerComponent={{ text: 'MY TITLE', style: { color: 'black' } }}
-          rightComponent={{ icon: 'home', color: 'black' }}
-        />
-        <Line />
-        <Carousel />
-        <Tile
-          imageSrc={{ uri: "http://p.chanyouji.cn/330447/1449299798969p1a5ofvqthoid1bsn15270daqu2.jpg?imageView2/1/w/480/h/288" }}
-          title="Lorem ipsum dolor sit amet, consectetur"
-          icon={{ name: 'play-circle', type: 'font-awesome' }}
-          contentContainerStyle={{ height: 70 }}
-        >
-          <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between' }}>
-            <Text>Caption</Text>
-            <Text>Caption</Text>
-          </View>
-        </Tile>
-        <Informatiom />
-      </View>
+      <ScrollView style={styles.overAll}>
+        <View style={{ backgroundColor: '#F5F5F5' }}>
+          <Header
+            outerContainerStyles={{ backgroundColor: 'white' }}
+            innerContainerStyles={{ justifyContent: 'space-between', alignItems: 'center' }}
+            leftComponent={
+              <Avatar
+                small
+                rounded
+                source={{ uri: "https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg" }}
+                onPress={() => console.log("Works!")}
+                activeOpacity={0.7}
+              />
+            }
+            centerComponent={{ text: 'MY TITLE', style: { color: 'black' } }}
+            rightComponent={{ icon: 'home', color: 'black' }}
+          />
+          <Line />
+          <Carousel />
+          <Tile
+            imageSrc={{ uri: "http://p.chanyouji.cn/330447/1449299798969p1a5ofvqthoid1bsn15270daqu2.jpg?imageView2/1/w/480/h/288" }}
+            title="Lorem ipsum dolor sit amet, consectetur"
+            icon={{ name: 'play-circle', type: 'font-awesome' }}
+            contentContainerStyle={{ height: 70 }}
+          >
+            <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between' }}>
+              <Text>Caption</Text>
+              <Text>Caption</Text>
+            </View>
+          </Tile>
+          <Informatiom />
+        </View>
+      </ScrollView>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  overAll: {
+    flexGrow: 1,
+  },
+});

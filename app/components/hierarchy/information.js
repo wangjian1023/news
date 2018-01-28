@@ -3,15 +3,17 @@
  */
 
 import React from 'react';
-import { connect } from 'dva';
+import { connect } from 'react-redux';
 import {
   View,
   StyleSheet,
   Text,
+  Image,
   FlatList,
 } from 'react-native';
-
-// import Size from '../../res/size/medium';
+// import {
+//   Avatar,
+// } from 'react-native-elements';
 
 const _separator = () => {
   return <View style={{ height: 0.5, backgroundColor: '#aaa' }} />;
@@ -25,7 +27,16 @@ function Macao(props) {
       renderItem={({ item }) => (
         <View style={styles.overAll} key={item.key}>
           <View style={styles.src}>
-            {item.img}
+            {/* <Avatar
+              large
+              source={{ uri: item.src }}
+              activeOpacity={0.7}
+              avatarStyle={{
+                borderRadius: 8,
+                backgroundColor: 'white',
+              }}
+            /> */}
+            <Image source={{ uri: item.src }} style={{ width: 150, height: 80 }} />
           </View>
           <View style={styles.centerContent}>
             <View>
@@ -47,9 +58,11 @@ const styles = StyleSheet.create({
     margin: 10,
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     flexDirection: 'row',
     position: 'relative',
+    backgroundColor: '#F5DEB3',
+    width: '100%',
   },
   label: {
     borderColor: '#14B9C8',
@@ -57,14 +70,13 @@ const styles = StyleSheet.create({
   },
   pic: {
     height: 60,
-    width: 100,
+    width: 200,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
   },
   centerContent: {
     flexDirection: 'column',
-    fontSize: 15,
     marginTop: 10,
     marginBottom: 10,
   },

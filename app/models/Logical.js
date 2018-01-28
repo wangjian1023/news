@@ -34,7 +34,7 @@ export default {
     Evaluation: [
       {
         key: 'index[0]',
-        src: 'http://d.ifengimg.com/w160_h90/p0.ifengimg.com/cmpp/2018/01/26/1d0b7a0b993811e5ee00082c2b309721_size72_w230_h152.jpg',
+        src: 'http://file28.mafengwo.net/M00/B3/7F/wKgB6lRTzqiAPvooAAnd5QaCdAw75.rbook_comment.w1024.jpeg',
         description: '175名中国游客滞留日本机场 有人与警方冲突高唱国歌',
         comments: '36.8万评',
         select: '',
