@@ -27,8 +27,22 @@
  *     Initial: 2018/01/24        Wang Jian
  */
 
-const large = {
-  fontSize: 20,
+const FontsSize = {
+  tiny: {
+    fontSize: 10,
+  },
+  small: {
+    fontSize: 12,
+  },
+  medium: {
+    fontSize: 15,
+  },
+  large: {
+    fontSize: 20,
+  },
+  xlarge: {
+    fontSize: 26,
+  },
 };
 
-export default large;
+export default FontsSize;

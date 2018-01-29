@@ -27,19 +27,10 @@ function Macao(props) {
       renderItem={({ item }) => (
         <View style={styles.overAll} key={item.key}>
           <View style={styles.src}>
-            {/* <Avatar
-              large
-              source={{ uri: item.src }}
-              activeOpacity={0.7}
-              avatarStyle={{
-                borderRadius: 8,
-                backgroundColor: 'white',
-              }}
-            /> */}
             <Image source={{ uri: item.src }} style={{ width: 150, height: 80 }} />
           </View>
           <View style={styles.centerContent}>
-            <View>
+            <View style={styles.text}>
               <Text>{item.description}</Text>
             </View>
             <View style={{ display: 'flex', flexDirection: 'row' }}>
@@ -58,18 +49,17 @@ const styles = StyleSheet.create({
     margin: 10,
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-between',
+    // justifyContent: 'space-between',
     flexDirection: 'row',
     position: 'relative',
     backgroundColor: '#F5DEB3',
-    width: '100%',
   },
   label: {
     borderColor: '#14B9C8',
     marginRight: 10,
   },
   pic: {
-    height: 60,
+    height: 80,
     width: 200,
     display: 'flex',
     alignItems: 'center',
@@ -79,6 +69,12 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     marginTop: 10,
     marginBottom: 10,
+  },
+  text: {
+    width: 200,
+    padding: 10,
+    height: 100,
+    // wordwrap: 'beak-word',
   },
 });
 

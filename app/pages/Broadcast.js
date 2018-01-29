@@ -30,6 +30,7 @@
 
 import React, { Component } from 'react';
 import Icon from 'react-native-vector-icons/Entypo';
+import Ionicons from 'react-native-vector-icons/FontAwesome';
 import { Header, Avatar, Tile } from 'react-native-elements';
 
 import {
@@ -76,9 +77,27 @@ export default class Classify extends Component {
           />
           <Line />
           <Carousel />
+          <View style={{
+            display: 'flex',
+            alignItems: 'center',
+            flexDirection: 'row',
+            marginLeft: 100,
+            marginTop: 20,
+            }}
+          >
+            <Text style={styles.refresh}>
+            下拉一下，看我感兴趣的内容
+              <Ionicons
+                name="chevron-circle-down"
+                size={20}
+                marginRight={30}
+                paddingLeft={10}
+                style={{ color: 'pink' }}
+              />
+            </Text>
+          </View>
           <Tile
             imageSrc={{ uri: "http://p.chanyouji.cn/330447/1449299798969p1a5ofvqthoid1bsn15270daqu2.jpg?imageView2/1/w/480/h/288" }}
-            title="Lorem ipsum dolor sit amet, consectetur"
             icon={{ name: 'play-circle', type: 'font-awesome' }}
             contentContainerStyle={{ height: 70 }}
           >
@@ -97,5 +116,13 @@ export default class Classify extends Component {
 const styles = StyleSheet.create({
   overAll: {
     flexGrow: 1,
+  },
+  refresh: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center',
+    height: 40,
+    marginLeft: 5,
   },
 });
