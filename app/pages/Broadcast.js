@@ -31,11 +31,12 @@
 import React, { Component } from 'react';
 import Icon from 'react-native-vector-icons/Entypo';
 import Ionicons from 'react-native-vector-icons/FontAwesome';
-import { Header, Avatar, Tile } from 'react-native-elements';
+import { Header, Avatar, Tile, SearchBar } from 'react-native-elements';
 
 import {
   View,
   Text,
+  Image,
   StyleSheet,
   ScrollView,
 } from 'react-native';
@@ -60,21 +61,22 @@ export default class Classify extends Component {
     return (
       <ScrollView style={styles.overAll}>
         <View style={{ backgroundColor: '#F5F5F5' }}>
-          <Header
-            outerContainerStyles={{ backgroundColor: 'white' }}
-            innerContainerStyles={{ justifyContent: 'space-between', alignItems: 'center' }}
-            leftComponent={
-              <Avatar
-                small
-                rounded
-                source={{ uri: "https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg" }}
-                onPress={() => console.log("Works!")}
-                activeOpacity={0.7}
-              />
-            }
-            centerComponent={{ text: 'MY TITLE', style: { color: 'black' } }}
-            rightComponent={{ icon: 'home', color: 'black' }}
-          />
+          <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+            <Avatar
+              small
+              rounded
+              source={{ uri: "https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg" }}
+              onPress={() => console.log("Works!")}
+              activeOpacity={0.7}
+            />
+            <SearchBar
+              round
+              lightTheme
+              // style={{ height: '30', width: '200' }}
+              placeholder="|搜索"
+            />
+            <Image source={{ uri: 'http://p.chanyouji.cn/330447/1449299798969p1a5ofvqthoid1bsn15270daqu2.jpg?imageView2/1/w/480/h/288' }} style={{ width: 40, height: 40 }} />
+          </View>
           <Line />
           <Carousel />
           <View style={{

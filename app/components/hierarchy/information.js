@@ -33,8 +33,8 @@ function Macao(props) {
             <View style={styles.text}>
               <Text>{item.description}</Text>
             </View>
-            <View style={{ display: 'flex', flexDirection: 'row' }}>
-              <Text>{item.select}</Text>
+            <View style={styles.paper} >
+              <Text style={styles.border}>{item.select}</Text>
               <Text>{item.comments}</Text>
             </View>
           </View>
@@ -49,33 +49,42 @@ const styles = StyleSheet.create({
     margin: 10,
     display: 'flex',
     alignItems: 'center',
-    // justifyContent: 'space-between',
     flexDirection: 'row',
     position: 'relative',
-    backgroundColor: '#F5DEB3',
+    // backgroundColor: '#F5DEB3',
   },
   label: {
     borderColor: '#14B9C8',
     marginRight: 10,
   },
   pic: {
-    height: 80,
-    width: 200,
+    height: 100,
+    width: 250,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
   },
   centerContent: {
     flexDirection: 'column',
-    marginTop: 10,
-    marginBottom: 10,
+    paddingLeft: 30,
   },
   text: {
     width: 200,
     padding: 10,
-    height: 100,
+    height: 60,
+    marginTop: 20,
     // wordwrap: 'beak-word',
   },
+  paper: {
+    display: 'flex',
+    marginLeft: 30,
+    flexDirection: 'row',
+    marginBottom: 20,
+  },
+  border: {
+    display: 'flex',
+  },
+
 });
 
 export default connect(({ others }) => ({

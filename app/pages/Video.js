@@ -37,6 +37,7 @@ import {
 
 export default class Video extends Component {
   static navigationOptions = {
+    header: null,
     tabBarLabel: '视频',
     tabBarIcon: ({ tintColor, focused }) => (
       <Icon
