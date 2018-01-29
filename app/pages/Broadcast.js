@@ -31,12 +31,11 @@
 import React, { Component } from 'react';
 import Icon from 'react-native-vector-icons/Entypo';
 import Ionicons from 'react-native-vector-icons/FontAwesome';
-import { Header, Avatar, Tile, SearchBar } from 'react-native-elements';
+import { Tile, SearchBar } from 'react-native-elements';
 
 import {
   View,
   Text,
-  Image,
   StyleSheet,
   ScrollView,
 } from 'react-native';
@@ -61,21 +60,32 @@ export default class Classify extends Component {
     return (
       <ScrollView style={styles.overAll}>
         <View style={{ backgroundColor: '#F5F5F5' }}>
-          <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
-            <Avatar
-              small
-              rounded
-              source={{ uri: "https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg" }}
-              onPress={() => console.log("Works!")}
-              activeOpacity={0.7}
-            />
-            <SearchBar
-              round
-              lightTheme
-              // style={{ height: '30', width: '200' }}
-              placeholder="|搜索"
-            />
-            <Image source={{ uri: 'http://p.chanyouji.cn/330447/1449299798969p1a5ofvqthoid1bsn15270daqu2.jpg?imageView2/1/w/480/h/288' }} style={{ width: 40, height: 40 }} />
+          <View style={{
+            flexDirection: 'row',
+            justifyContent: 'space-around',
+            height: 60,
+            backgroundColor: '#F0F8FF',
+            }}
+          >
+            {/* <View>
+              <Avatar
+                small
+                rounded
+                source={{ uri: "https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg" }}
+                onPress={() => console.log("Works!")}
+                activeOpacity={0.7}
+              />
+            </View> */}
+            <Text style={{ display: 'flex', alignItems: 'center', marginTop: 20 }}>凤凰新闻</Text>
+            <View style={{ display: 'flex', width: 260, height: 30 }}>
+              <SearchBar
+                round
+                lightTheme
+                placeholder="|搜索"
+              />
+            </View>
+            {/* <Image source={{ uri: 'http://p.chanyouji.cn/330447/1449299798969p1a5ofvqthoid1bsn15270daqu2.jpg?imageView2/1/w/480/h/288' }} style={{ width: 40, height: 40 }} /> */}
+            <Text style={{ display: 'flex', alignItems: 'center', marginTop: 20 }}>发现</Text>
           </View>
           <Line />
           <Carousel />
