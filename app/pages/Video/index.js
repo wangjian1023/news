@@ -1,7 +1,7 @@
 /*
  * MIT License
  *
- * Copyright (c) 2018 SmartestEE Co., Ltd..
+ * Copyright (c) 2018 SmartestEE Co., Ltd.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -24,15 +24,34 @@
 
 /*
  * Revision History:
- *     Initial: 2018/01/24        Wang Jian
+ *     Initial: 2018/01/16        Wang Jian
  */
 
-const FontsSize = {
-  tiny: 10,
-  small: 12,
-  medium: 15,
-  large: 20,
-  xlarge: 26,
-};
+import React, { Component } from 'react';
+import Icon from 'react-native-vector-icons/Ionicons';
+import { View, Text } from 'react-native';
 
-export default FontsSize;
+import ScrollableTabView from './ScrollableTabView';
+
+export default class Video extends Component {
+  static navigationOptions = {
+    header: null,
+    tabBarLabel: '视频',
+    tabBarIcon: ({ tintColor, focused }) => (
+      <Icon
+        name={focused ? 'ios-videocam' : 'ios-videocam-outline'}
+        size={26}
+        style={{ color: tintColor }}
+      />
+    ),
+  }
+  render() {
+    return (
+      <ScrollableTabView>
+        <View>asdf</View>
+        <View>asdf</View>
+        <View>asdf</View>
+      </ScrollableTabView>
+    );
+  }
+}

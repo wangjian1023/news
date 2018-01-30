@@ -38,7 +38,7 @@ import {
 } from 'react-native-elements';
 
 // import BasicColor from '../../res/Color/BasicColor';
-import medium from '../../res/size/medium';
+import medium from '../../res/Fonts/size';
 
 export default class RankHeader extends React.Component {
   render() {
@@ -124,6 +124,6 @@ const styles = StyleSheet.create({
   },
   textrank: {
     marginRight: 10,
-    fontSize: medium.fontSize,
+    fontSize: medium.medium,
   },
 });

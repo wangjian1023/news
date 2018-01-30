@@ -32,7 +32,7 @@ import { TabNavigator } from 'react-navigation';
 import Broadcast from './pages/Broadcast';
 import Mine from './pages/Mine';
 import Trends from './pages/Trends';
-import Video from './pages/Video';
+import Video from './pages/Video/index';
 
 
 const Tabs = TabNavigator({

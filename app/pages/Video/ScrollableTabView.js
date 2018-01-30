@@ -28,30 +28,26 @@
  */
 
 import React, { Component } from 'react';
-import Icon from 'react-native-vector-icons/Ionicons';
-
-import {
-  View,
-  Text,
-} from 'react-native';
+import ScrollableTabView, { ScrollableTabBar } from 'react-native-scrollable-tab-view';
+import { Text } from 'react-native';
 
 export default class Video extends Component {
-  static navigationOptions = {
-    header: null,
-    tabBarLabel: '视频',
-    tabBarIcon: ({ tintColor, focused }) => (
-      <Icon
-        name={focused ? 'ios-videocam' : 'ios-videocam-outline'}
-        size={26}
-        style={{ color: tintColor }}
-      />
-    ),
-  }
   render() {
     return (
-      <View>
-        <Text>视频</Text>
-      </View>
+      <ScrollableTabView
+        style={{ marginTop: 20 }}
+        initialPage={0}
+        renderTabBar={() => <ScrollableTabBar />}
+      >
+        <Text tabLabel="Tab #1" />
+        <Text tabLabel="Tab #2" />
+        <Text tabLabel="Tab #3" />
+        <Text tabLabel="Tab #3" />
+        <Text tabLabel="Tab #3" />
+        <Text tabLabel="Tab #3" />
+        <Text tabLabel="Tab #3" />
+        <Text tabLabel="Tab #3" />
+      </ScrollableTabView>
     );
   }
 }
