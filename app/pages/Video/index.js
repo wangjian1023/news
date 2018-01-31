@@ -29,9 +29,10 @@
 
 import React, { Component } from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 
-import ScrollableTabView from './ScrollableTabView';
+// import ScrollableTabView from './ScrollableTabView';
+import Dummy from '../../components/Dummy';
 
 export default class Video extends Component {
   static navigationOptions = {
@@ -47,11 +48,14 @@ export default class Video extends Component {
   }
   render() {
     return (
-      <ScrollableTabView>
-        <View>asdf</View>
-        <View>asdf</View>
-        <View>asdf</View>
-      </ScrollableTabView>
+      // <ScrollableTabView>
+      //   <View>asdf</View>
+      //   <View>asdf</View>
+      //   <View>asdf</View>
+      // </ScrollableTabView>
+      <View>
+        <Dummy />
+      </View>
     );
   }
 }
