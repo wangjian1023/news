@@ -16,25 +16,20 @@ const _separator = () => {
   return <View style={{ height: 0.5, backgroundColor: 'red ' }} />;
 };
 
-function Macao() {
-  return (
-    <View>
-      <FlatList
-        ItemSeparatorComponent={_separator}
-      />
-      <Tile
-        ItemSeparatorComponent={_separator}
-        imageSrc={{ uri: "http://p.chanyouji.cn/330447/1449299798969p1a5ofvqthoid1bsn15270daqu2.jpg?imageView2/1/w/480/h/288" }}
-        icon={{ name: 'play-circle', type: 'font-awesome' }}
-        contentContainerStyle={{ height: 70 }}
-      >
-        <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between' }}>
-          <Text>Caption</Text>
-          <Text>Caption</Text>
-        </View>
-      </Tile>
-    </View>
-  );
+class editor extends Component {
+  render() {
+    return (
+      <View>
+        <Tile
+          ItemSeparatorComponent={_separator}
+          imageSrc={{ uri: "http://p.chanyouji.cn/330447/1449299798969p1a5ofvqthoid1bsn15270daqu2.jpg?imageView2/1/w/480/h/288" }}
+          icon={{ name: 'play-circle', type: 'font-awesome' }}
+          contentContainerStyle={{ height: 70 }}
+        />
+        {/* <View>liuqi</View> */}
+      </View>
+    );
+  }
 }
 
 // const styles = StyleSheet.create({
