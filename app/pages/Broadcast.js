@@ -32,7 +32,6 @@ import React, { Component } from 'react';
 import Icon from 'react-native-vector-icons/Entypo';
 import Ionicons from 'react-native-vector-icons/FontAwesome';
 import { Tile, SearchBar } from 'react-native-elements';
-
 import {
   View,
   Text,

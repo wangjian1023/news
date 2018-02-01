@@ -2,16 +2,15 @@
  * 2018-01-31   Wang Jian
  */
 
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {
   View,
   // StyleSheet,
   Text,
-  FlatList,
 } from 'react-native';
 import { Tile } from 'react-native-elements';
-
+import { Icon } from 'react-native-vector-icons/Feather';
 
 const _separator = () => {
   return <View style={{ height: 0.5, backgroundColor: 'red ' }} />;
@@ -81,6 +80,5 @@ function Macao() {
 
 // });
 
-export default connect(({ others }) => ({
-  Evaluation: others.Evaluation,
-}))(Macao);
+export default connect(() => ({
+}))(editor);

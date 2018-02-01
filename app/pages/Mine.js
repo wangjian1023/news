@@ -29,14 +29,14 @@
 
 import React, { Component } from 'react';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-
+import { Avatar } from 'react-native-elements';
 import {
   View,
-  Text,
 } from 'react-native';
 
 export default class Mine extends Component {
   static navigationOptions = {
+    header: null,
     tabBarLabel: '我',
     tabBarIcon: ({ tintColor, focused }) => (
       <Icon
@@ -49,7 +49,13 @@ export default class Mine extends Component {
   render() {
     return (
       <View>
-        <Text>我</Text>
+        <Avatar
+          small
+          rounded
+          source={{ uri: "http://p.chanyouji.cn/1391695908/7C6AC2D4-7A7A-4480-9FC9-28403BDD62B1.jpg?imageView2/1/w/480/h/288" }}
+          onPress={() => console.log("Works!")}
+          activeOpacity={0.7}
+        />
       </View>
     );
   }

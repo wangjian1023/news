@@ -29,7 +29,6 @@
 
 import React, { Component } from 'react';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-
 import {
   View,
   Text,
@@ -37,6 +36,7 @@ import {
 
 export default class Trends extends Component {
   static navigationOptions = {
+    header: null,
     tabBarLabel: '风直播',
     tabBarIcon: ({ tintColor, focused }) => (
       <Icon
