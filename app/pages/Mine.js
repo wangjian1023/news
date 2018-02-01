@@ -32,7 +32,12 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import { Avatar } from 'react-native-elements';
 import {
   View,
+  Text,
+  StyleSheet,
 } from 'react-native';
+
+import FontsSize from '../res/Fonts/size';
+import Colors from '../res/color/color';
 
 export default class Mine extends Component {
   static navigationOptions = {
@@ -49,14 +54,42 @@ export default class Mine extends Component {
   render() {
     return (
       <View>
-        <Avatar
-          small
-          rounded
-          source={{ uri: "http://p.chanyouji.cn/1391695908/7C6AC2D4-7A7A-4480-9FC9-28403BDD62B1.jpg?imageView2/1/w/480/h/288" }}
-          onPress={() => console.log("Works!")}
-          activeOpacity={0.7}
-        />
+        <View style={styles.push}>
+          <Avatar
+            medium
+            rounded
+            source={{ uri: "http://p.chanyouji.cn/1391695908/7C6AC2D4-7A7A-4480-9FC9-28403BDD62B1.jpg?imageView2/1/w/480/h/288" }}
+            onPress={() => console.log("Works!")}
+            activeOpacity={0.7}
+          />
+          <Text style={styles.text}>未设置昵称 </Text>
+        </View>
       </View>
     );
   }
 }
+const styles = StyleSheet.create({
+  overAll: {
+    flexGrow: 1,
+  },
+  refresh: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center',
+    height: 40,
+    marginLeft: 5,
+  },
+  text: {
+    display: 'flex',
+    fontSize: FontsSize.medium,
+    paddingLeft: 50,
+    alignItems: 'center',
+  },
+  push: {
+    display: 'flex',
+    backgroundColor: Colors.primary,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+});
