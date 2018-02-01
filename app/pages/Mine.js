@@ -1,7 +1,7 @@
 /*
  * MIT License
  *
- * Copyright (c) 2018 SmartestEE Co., Ltd.
+ * Copyright (c) 2018 SmartestEE Co., Ltd..
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -38,13 +38,8 @@ import {
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
-
 import FontsSize from '../res/Fonts/size';
 import Colors from '../res/color/color';
-
-const _separator = () => {
-  return <View style={{ height: 2, backgroundColor: '#aaa' }} />;
-};
 
 export default class Mine extends Component {
   static navigationOptions = {
@@ -58,6 +53,7 @@ export default class Mine extends Component {
       />
     ),
   }
+
   render() {
     return (
       <View>
@@ -66,7 +62,7 @@ export default class Mine extends Component {
             medium
             rounded
             source={{ uri: "http://p.chanyouji.cn/1391695908/7C6AC2D4-7A7A-4480-9FC9-28403BDD62B1.jpg?imageView2/1/w/480/h/288" }}
-            onPress={() => console.log("Works!")}
+            onPress={() => {}}
             activeOpacity={0.7}
           />
           <Text style={styles.text}>未设置昵称 </Text>
