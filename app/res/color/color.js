@@ -30,11 +30,13 @@
 const bold = {
   size: 'bold',
   color: '#14B9C8',
-  primary: '#14B9C8',
+  primary: '#B0E0E6',
   white: '#fff',
   gray: 'rgba(244,244,244,0.8)',
   black: '#000',
   orange: 'orange',
+  Moccasin: '#FFE4B5',
+  Snow: '#FFFAFA',
 };
 
 export default bold;
