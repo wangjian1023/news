@@ -73,7 +73,6 @@ const styles = StyleSheet.create({
     padding: 10,
     height: 60,
     marginTop: 20,
-    // wordwrap: 'beak-word',
   },
   paper: {
     display: 'flex',

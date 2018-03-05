@@ -27,18 +27,6 @@ class editor extends Component {
 }
 
 // const styles = StyleSheet.create({
-//   overAll: {
-//     margin: 10,
-//     display: 'flex',
-//     alignItems: 'center',
-//     flexDirection: 'row',
-//     position: 'relative',
-//     // backgroundColor: '#F5DEB3',
-//   },
-//   label: {
-//     borderColor: '#14B9C8',
-//     marginRight: 10,
-//   },
 // });
 
 export default editor;
